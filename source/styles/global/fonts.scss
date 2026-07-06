@@ -18,6 +18,7 @@ font-face {
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url("../../fonts/oswald/Lato-Regular.woff2") format("woff2");
+    // Здесь перепутал директорию
+    src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2");
   }
 }

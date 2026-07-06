@@ -73,7 +73,8 @@ export function processStyles () {
     .pipe(server.stream());
 }
 
-export function processScripts () {
+// Здесь забыл async
+export async function processScripts () {
   const gulpEsbuild = createGulpEsbuild({ incremental: isDevelopment });
 
   return src(`${PATH_TO_SOURCE}scripts/*.js`)

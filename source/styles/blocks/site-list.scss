@@ -65,7 +65,8 @@
       position: relative;
     }
 
-    .site-list__item--active::after a {
+    // Здесь пытался стили применить к тегу a внутри псевдоэлемента, а его там нет по понятным причинам
+    .site-list__item--active::after {
       content: "";
       position: absolute;
       width: 64px;
