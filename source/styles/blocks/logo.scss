@@ -1,0 +1,15 @@
+.logo {
+
+    @media (min-width: $desktop-width) {
+        &:hover {
+            opacity: 0;
+        }
+        
+    
+        &:active {
+            opacity: 0.6;
+        }
+    }
+    
+}
+

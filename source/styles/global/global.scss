@@ -1,0 +1,32 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее */
+.page {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $basic-text-color;
+}
+
+.page__body {
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $basic-white;
+}
+

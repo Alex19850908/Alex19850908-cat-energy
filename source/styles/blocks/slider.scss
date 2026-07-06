@@ -1,0 +1,77 @@
+.slider {
+
+}
+
+.slider__image {
+
+}
+
+.slider__button {
+    position: relative;
+    display: block;
+    width: 4px;
+    height: 256px;
+    padding: 0;
+    background-color: $special-grey;
+    border: none;
+
+    &:is(:hover, :focus, :focus-visible) {
+        background-color: $accent-color;
+    }
+
+    &:active {
+        opacity: 0.4;
+        background-color: $accent-color-2;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        display: block;
+        width: 40px;
+        height: 40px;
+
+        background-color: $basic-white;
+        border: 2px solid $special-grey;
+        border-radius: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+     &:is(:hover, :focus, :focus-visible)::before {
+        border-color: $accent-color;
+     }
+
+    &::after {
+        content:"";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        display: block;
+        width: 40px;
+        height: 40px;
+
+        background-image: url("../../icons/stack.svg#slider-button");
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;   
+        
+        transform: translate(-50%, -50%);
+    }
+
+    &:is(:hover, :focus, :focus-visible)::after {
+        background-color: $accent-color;
+    }
+
+    &:active::after {
+        border-radius: 50%;
+    }
+ }
+
+
+
+

@@ -1,0 +1,37 @@
+.main-nav {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav__toggle {
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  position: absolute;
+  top: 45px;
+  left: -20;
+
+  display: none;
+  
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: static;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: static;
+  }
+}

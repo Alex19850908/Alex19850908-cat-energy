@@ -1,0 +1,48 @@
+.main-footer {
+
+}
+
+.main-footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.main-footer__logo {
+    position: relative;
+    align-self: center;
+    margin-bottom: 43px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        width: 280px;
+        height: 0;
+        border: 1px solid $border-grey;
+        transform: translateX(-100px);
+    }
+}
+
+.main-footer__logo-text {
+
+}
+
+.main-footer__social {
+    margin-bottom: 40px;
+}
+
+.main-footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer__html-academy-logo {
+
+}
+
+
+
+
