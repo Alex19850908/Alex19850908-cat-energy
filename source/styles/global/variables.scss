@@ -1,16 +1,20 @@
 /* здесь используйте глобальные переменные */
 
 // Цвета
+$bg-color: #eaeaea;
 $basic-white: #ffffff;
 $basic-black: #000000;
 $basic-grey: #f2f2f2;
 $basic-text-color: #444444;
 $basic-text-color-2: #222222;
 $special-grey: #666666;
+$special-grey-2: #ebebeb;
 $dark-grey: #111111;
 $accent-color: #68b738;
-$accent-color-2: #5EAA2F;
+$accent-color-2: #5eaa2f;
 $border-grey: #d9d9d9;
+$more-grey: #d3d3d3;
+$subscribe-grey: #cdcdcd;
 
 // Шрифты
 $primary-font: "Lato", "Arial", sans-serif;
@@ -19,3 +23,4 @@ $secondary-font: "Oswald", "Arial", sans-serif;
 // Размеры вьюпортов
 $tablet-width: 768px;
 $desktop-width: 1440px;
+$mobile-width-only: 767px;

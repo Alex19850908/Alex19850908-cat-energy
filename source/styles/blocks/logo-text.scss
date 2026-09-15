@@ -1,15 +1,28 @@
 .logo-text {
+  display: block;
+  width: 101px;
+  height: 18px;
+  background-color: $dark-grey;
+  mask-image: url("../../icons/stack.svg#logo-text__mobile-tablet");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
 
-    @media (min-width: $desktop-width) {
-        &:hover {
-            opacity: 0.8;
-            background-color: red;
-        }
-    
-        &:active {
-            opacity: 0.6;
-        }
+  @media (min-width: $desktop-width) {
+    & {
+      width: 118px;
+      height: 21px;
+      mask-image: url("../../icons/stack.svg#logo-text__desktop");
     }
-    
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }
 

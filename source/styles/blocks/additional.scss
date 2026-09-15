@@ -1,50 +1,335 @@
 .additional {
-  background-color: #ffffff;
+  font-family: $secondary-font;
 }
 
 .additional-wrapper {
+  margin: 0 auto;
+  padding: 25px 20px 18px;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 0;
+  }
 }
 
 .additional__title {
-  color: #000000;
-  font-family: $secondary-font;
-  font-size: 32px;
-  line-height: 32px;
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    & {
+      position: relative;
+      margin-bottom: 80px;
+      padding-left: 70px;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 30px;
+      border: 2px solid $accent-color;
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 0;
+      width: 357px;
+      border: 2px solid $accent-color;
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    & {
+      padding-left: 110px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &::after {
+      width: 914px;
+    }
+
+    &::before {
+      width: 70px;
+    }
+  }
+}
+
+.additional-inner-wrap {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 0 110px;
+  }
 }
 
 .additional__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
+  @media (min-width: $tablet-width) {
+    & {
+      margin: 0 30px 30px;
+      padding: 26px 30px 28px;
+      border: 1px solid $subscribe-grey;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    & {
+      border: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    & {
+      margin: 0;
+      margin-right: 80px;
+      padding: 0;
+      padding-top: 15px;
+    }
+  }
 }
 
 .additional__item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-areas:
+    "title    title"
+    "quantity price"
+    "button   button";
 
+  &::after {
+    content: "";
+    width: 280px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+    border: 1px solid #d9d9d9;
+  }
+
+  &:last-child::after {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    & {
+      grid-template-columns: 316px 225px 91px;
+      grid-template-areas:
+        "title  quantity price"
+        "button button   button";
+    }
+
+    &::after {
+      content: "";
+      width: 709px;
+      margin-top: 27px;
+      margin-bottom: 27px;
+      border: 1px solid #d9d9d9;
+      transform: translateX(-30px);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    & {
+      position: relative;
+      grid-template-columns: 325px 243px 82px 244px;
+      grid-template-areas: "title quantity price button";
+      align-items: center;
+    }
+
+    &::after {
+      content: "";
+      width: 895px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #d9d9d9;
+      transform: translateX(0);
+    }
+
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      width: 895px;
+      border: 1px solid #d9d9d9;
+    }
+
+    &:last-child::after {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .additional__subtitle {
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 16px;
   color: $basic-text-color-2;
-  font-family: $secondary-font;
-  font-size: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .additional__quantity {
+  grid-area: quantity;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    & {
+      margin-left: auto;
+      font-family: $primary-font;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    & {
+      margin: 0;
+    }
+  }
 }
 
 .additional__price {
+  grid-area: price;
+  margin: 0;
+  margin-left: auto;
 
+  @media (min-width: $tablet-width) {
+    & {
+      font-family: $primary-font;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    & {
+      margin: 0;
+    }
+  }
 }
 
 .additional__button {
+  grid-area: button;
   color: $basic-white;
   font-family: $secondary-font;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    & {
+      padding: 10px 91px;
+    }
+
+    &:hover {
+      background-color: $accent-color-2;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.2);
+      background-color: $accent-color-2;
+    }
+  }
 }
 
 .additional__present {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 290px;
+  width: 100%;
+  background-image: url("../../images/additional-mobile-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+  @media (min-width: $tablet-width) {
+    & {
+      align-self: center;
+      // width: 92%;
+      background-image: url("../../images/additional-tablet-bg.jpg");
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    & {
+      width: 20%;
+      background-image: url("../../images/additional-desktop-bg.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.additional__present::before {
+  content: "";
+  position: absolute;
+  top: 65px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../../icons/stack.svg#additional-icon");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    top: 97px;
+    left: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 56px;
+    left: 83px;
+  }
 }
 
 .additional__present-description {
+  align-self: flex-end;
+  margin: 0;
+  margin-bottom: 43px;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
   color: $basic-white;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    margin: 0 125px 0 auto;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    place-self: center center;
+    margin: 0;
+    margin-top: 165px;
+    text-align: center;
+  }
 }

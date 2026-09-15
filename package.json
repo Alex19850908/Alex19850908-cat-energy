@@ -2,7 +2,7 @@
   "name": "cat-energy",
   "version": "2.0.7",
   "private": true,
-  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
+  "description": "Личный проект «{{cat-energy}}» от HTML Academy",
   "type": "module",
   "engines": {
     "node": "^18.18 || ^20.9"
@@ -34,7 +34,7 @@
     "@linthtml/linthtml": "0.9.6",
     "browser-sync": "^3.0.4",
     "browserslist-to-esbuild": "2.1.1",
-    "eslint": "8.57.0",
+    "eslint": "^8.57.0",
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "^5.0.1",
     "gulp-esbuild": "^0.15.0",

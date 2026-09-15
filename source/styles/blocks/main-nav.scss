@@ -1,10 +1,53 @@
 .main-nav {
+  position: relative;
+
   @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
     display: block;
   }
 }
 
-.main-nav__toggle {
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: -16px;
+  right: 10px;
+
+  width: 24px;
+  height: 24px;
+  margin-top: 6px;
+  background-image: url("../../icons/stack.svg#burger-menu-closed");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: -16px;
+  right: 10px;
+
+  width: 24px;
+  height: 24px;
+  margin-top: 6px;
+  background-image: url("../../icons/stack.svg#burger-menu-opened");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -17,21 +60,42 @@
 
 .main-nav__list {
   position: absolute;
-  top: 45px;
-  left: -20;
-
-  display: none;
-  
+  top: 32px;
+  left: -162px;
+  width: auto;
+  min-height: 198px;
   margin: 0;
   padding: 0;
+  transform: translateX(-50%);
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     position: static;
+    transform: translateX(0);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
+    display: flex;
     position: static;
+    transform: translateX(0);
   }
 }
+
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
+.main-nav--opened .main-nav__list {
+  display: block;
+}
+
+// .main-nav--nojs .main-nav__toggle {
+//   display: none;
+// }
+

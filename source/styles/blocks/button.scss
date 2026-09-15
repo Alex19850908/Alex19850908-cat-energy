@@ -1,10 +1,11 @@
 .button {
   padding: 10px 44px;
-  font-family: "Oswald", sans-serif;
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $basic-white;
   background-color: $accent-color;
   border: none;
+  box-sizing: border-box;
 }

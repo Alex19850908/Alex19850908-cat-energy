@@ -1,27 +1,139 @@
 .subscribe {
   font-family: $secondary-font;
-  line-height: 32px;
+  //   line-height: 32px;
   color: $basic-black;
 }
 
 .subscribe-wrapper {
+  margin: 0 auto;
+  padding: 40px 20px;
 
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 96px 0 104px;
+  }
 }
 
 .subscribe__title {
-  font-size: 32px;
+  position: relative;
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 24px;
+  line-height: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -20;
+    width: 108px;
+    border: 2px solid $accent-color;
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    padding-left: 70px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 30px;
+      border: 2px solid $accent-color;
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      top: 16px;
+      right: 0;
+      width: 456px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+    font-size: 40px;
+    line-height: 40px;
+
+    &::before {
+      content: "";
+      top: 20px;
+      width: 70px;
+      border: 2px solid $accent-color;
+    }
+
+    &::after {
+      content: "";
+      top: 20px;
+      width: 1053px;
+      border: 2px solid $accent-color;
+    }
+  }
 }
 
 .subscribe__description {
-  font-size: 24px;
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 68px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .subscribe__form {
+  display: flex;
+  flex-direction: column;
 
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .subscribe__form-input {
+  margin-bottom: 16px;
+  padding: 13px;
+  height: 20px;
+  width: 252px;
+  border: 1px solid $subscribe-grey;
+  appearance: none;
+  vertical-align: text-bottom;
 
+  @media (min-width: $tablet-width) {
+    width: 348px;
+    height: 30px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 496px;
+  }
+}
+
+.subscribe__form-input::placeholder {
+  margin-top: 10px;
+  font-family: $secondary-font;
+  font-size: 20px;
+  color: $basic-text-color;
+  vertical-align: text-bottom;
+  text-transform: uppercase;
 }
 
 .subscribe__form-button {
@@ -29,4 +141,19 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: $accent-color-2;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.2);
+      background-color: $accent-color-2;
+    }
+  }
 }

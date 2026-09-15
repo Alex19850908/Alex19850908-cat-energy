@@ -1,61 +1,75 @@
 .social {
-
 }
 
 .social__list {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 280px;
+    height: 0;
+    border: 1px solid $border-grey;
+    // transform: translateX(-10px);
+  }
+
+  @media (min-width: $tablet-width) {
     &::before {
-        content: "";
-        position: absolute;
-        top: 40px;
-        left: 20px;
-        width: 280px;
-        height: 0;
-        border: 1px solid $border-grey;
-        transform: translateX(-20px);
+      display: none;
     }
+  }
 }
 
 .social__item {
+  &:first-child {
+    margin-right: 26px;
+  }
 
-    &:first-child {
-        margin-right: 26px;
-    }
-
-    &:nth-child(2) {
-        margin-right: 30px;
-    }
-    
+  &:nth-child(2) {
+    margin-right: 30px;
+  }
 }
 
 .social__link {
-    display: block;
+  display: block;
+  background-color: $special-grey;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:active {
+    background-color: $accent-color;
+    opacity: 0.3;
+  }
 }
 
 .social__link--vkontakte {
-    width: 27px;
-    height: 17px;
-    background-image: url("../../icons/stack.svg#vkontakte");
-    background-size: 27px 17px;
+  width: 27px;
+  height: 17px;
+  mask-image: url("../../icons/stack.svg#vkontakte");
 }
 
 .social__link--youtube {
-    width: 24px;
-    height: 19px;
-    background-image: url("../../icons/stack.svg#youtube");
-    background-size: 24px 19px;
+  width: 24px;
+  height: 19px;
+  mask-image: url("../../icons/stack.svg#youtube");
 }
 
 .social__link--telegram {
-    width: 20px;
-    height: 17px;
-    background-image: url("../../icons/stack.svg#telegram");
-    background-size: 20px 17px;
+  width: 20px;
+  height: 17px;
+  mask-image: url("../../icons/stack.svg#telegram");
 }
